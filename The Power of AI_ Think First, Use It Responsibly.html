@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Power of AI: Think First, Use It Responsibly</title>
+<style>
+:root{--bg:#f5f7ff;--card:#fff;--tx:#1b1f3b;--mu:#5b6288;--p:#7c3aed;--b:#2563eb;--bd:#e1e5fb;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1226;--card:#1a1e3d;--tx:#eef0ff;--mu:#a3aad6;--bd:#2c3162}}
+:root[data-theme="dark"]{--bg:#0f1226;--card:#1a1e3d;--tx:#eef0ff;--mu:#a3aad6;--bd:#2c3162}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 "Segoe UI",system-ui,Arial,sans-serif}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:10px;background:linear-gradient(90deg,#2563eb,#7c3aed)}
+nav a{color:#fff;text-decoration:none;padding:6px 16px;border-radius:99px;font-weight:600;transition:.2s}
+nav a:hover{background:rgba(255,255,255,.25);transform:translateY(-2px)}
+.hero{text-align:center;padding:70px 20px 60px;color:#fff;background:radial-gradient(circle at 20% 20%,#6d8bff55,transparent 50%),linear-gradient(135deg,#1e3a8a,#7c3aed)}
+.hero h1{font-size:clamp(2.2rem,7vw,4.5rem);margin:0;letter-spacing:2px}
+.hero h1 span{color:#c4b5fd}.hero p{max-width:640px;margin:14px auto 0;font-size:1.15rem;opacity:.92}
+.bot{font-size:3.5rem;animation:fl 3s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-10px)}}
+section{max-width:1100px;margin:0 auto;padding:60px 18px}
+.row{display:flex;gap:34px;align-items:center;flex-wrap:wrap}.row.rev{flex-direction:row-reverse}
+.row>*{flex:1 1 340px;min-width:0}
+.img{display:block;width:100%;padding:0;border:0;border-radius:24px;overflow:hidden;cursor:pointer;position:relative;box-shadow:0 12px 34px #4a3aff33;transition:.3s;background:none}
+.img:hover{transform:scale(1.03) rotate(-1deg);box-shadow:0 18px 44px #7c3aed55}
+.img svg{display:block;width:100%;height:auto}
+.hint{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:#000a;color:#fff;font-size:.8rem;padding:4px 12px;border-radius:99px;white-space:nowrap}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:0 0 8px;background:linear-gradient(90deg,var(--b),var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bad h2{background:linear-gradient(90deg,#e11d48,var(--p));-webkit-background-clip:text;background-clip:text}
+.mu{color:var(--mu)}
+ul.l{list-style:none;padding:0;margin:14px 0}
+ul.l li{padding:9px 14px 9px 42px;margin:8px 0;background:var(--card);border:1px solid var(--bd);border-radius:12px;position:relative;transition:.2s}
+ul.l li{cursor:pointer}ul.l li:hover{transform:translateX(6px);border-color:var(--p)}
+ul.l li.on{background:linear-gradient(90deg,#7c3aed33,#2563eb33);border-color:var(--p)}
+ul.l li:before{content:"✔";position:absolute;left:14px;color:#16a34a;font-weight:700}
+.bad ul.l li:before{content:"✖";color:#e11d48}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:0;cursor:pointer;color:#fff;font:600 .95rem inherit;font-family:inherit;padding:10px 18px;border-radius:99px;background:linear-gradient(90deg,var(--b),var(--p));transition:.2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 8px 18px #7c3aed55}.btn.on{outline:3px solid #fbbf24}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-height:0;overflow:hidden;opacity:0;transition:max-height .6s ease,opacity .5s,margin .4s}
+.gal.open{max-height:1400px;opacity:1;margin-top:30px}
+.gc{background:var(--card);border:1px solid var(--bd);border-radius:18px;overflow:hidden;transition:.3s}
+.gc:hover{transform:translateY(-6px);box-shadow:0 12px 28px #7c3aed33}
+.gc svg{display:block;width:100%;height:auto}.gc div{padding:14px 16px}.gc h3{margin:0 0 4px}.gc p{margin:0;color:var(--mu);font-size:.95rem}
+.tipsbg{background:linear-gradient(180deg,transparent,#7c3aed14)}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin:26px 0}
+.tip{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px 16px;text-align:center;transition:.3s}
+.tip:hover{transform:translateY(-8px) scale(1.03);border-color:var(--p)}.tip i{font-style:normal;font-size:2.6rem;display:block}
+.tip h3{margin:8px 0 4px}.tip p{margin:0;color:var(--mu);font-size:.93rem}
+.rv{opacity:0;transform:translateY(30px);transition:.7s}.rv.in{opacity:1;transform:none}
+footer{text-align:center;color:#fff;padding:40px 20px;background:linear-gradient(135deg,#1e3a8a,#7c3aed)}
+footer h3{margin:0 0 6px;color:#c4b5fd}footer p{margin:4px 0}
+</style></head><body>
+<nav><a href="#home">Home</a><a href="#good">Good Practices</a><a href="#bad">Bad Practices</a><a href="#tips">Tips</a></nav>
+<header class="hero" id="home"><div class="bot">🤖</div><h1>THE POWER <span>OF AI</span></h1><h2 style="-webkit-text-fill-color:#fff;color:#fff;background:none;font-size:1.5rem">Think First. Prompt Second. Use It Responsibly.</h2>
+<p>Artificial intelligence is a powerful tool. Using it responsibly helps us learn, create and grow, while protecting ourselves and others.</p></header>
+
+<section id="good" class="rv"><div class="row" id="good-row"></div><div class="gal" id="good-gal"></div></section>
+<section id="bad" class="bad rv"><div class="row rev" id="bad-row"></div><div class="gal" id="bad-gal"></div></section>
+<div class="tipsbg"><section id="tips" class="rv"><div class="btns" style="justify-content:space-between;align-items:center"><h2 id="tips-t"></h2><button class="btn" id="tips-tr"></button></div><div class="tips" id="tips-g"></div></section></div>
+<footer><h3>Created by</h3><p>Created by: Students of 5th Year of Secondary School – Section E</p><p>Using technology wisely to build a better future.</p></footer>
+
+<script>
+const D={
+good:{pal:["#2563eb","#7c3aed"],main:["🧑‍🎓","💻","✨"],
+en:{t:"How to Use AI Correctly",p:"AI works best as a helpful partner for your learning. Use these good habits to get the most out of it.",
+i:["Use AI as a learning assistant, not as a replacement for your thinking.","Check the accuracy of AI-generated information.","Protect your personal information.","Use AI to develop ideas and improve your skills.","Give credit to sources when necessary.","Think critically about the answers AI provides."],
+g:[["AI as a Tutor","A student uses AI to understand a difficult school topic."],["Research Assistant","A student uses AI to find ideas and then verifies the information with reliable sources."],["Creative Learning","A student uses AI to brainstorm ideas for a presentation or project."]]},
+es:{t:"Cómo usar la IA correctamente",p:"La IA funciona mejor como un compañero que te ayuda a aprender. Usa estos buenos hábitos para aprovecharla al máximo.",
+i:["Usa la IA como asistente de aprendizaje, no como reemplazo de tu pensamiento.","Verifica la exactitud de la información generada por la IA.","Protege tu información personal.","Usa la IA para desarrollar ideas y mejorar tus habilidades.","Da crédito a las fuentes cuando sea necesario.","Piensa críticamente sobre las respuestas que da la IA."],
+g:[["La IA como tutor","Un estudiante usa la IA para entender un tema difícil de la escuela."],["Asistente de investigación","Un estudiante usa la IA para buscar ideas y luego verifica la información con fuentes confiables."],["Aprendizaje creativo","Un estudiante usa la IA para generar ideas para una presentación o proyecto."]]},
+ge:[["👩‍🏫","🧠","💡"],["🔍","📚","✅"],["🎨","💭","📊"]]},
+bad:{pal:["#e11d48","#7c3aed"],main:["😵","📋","⚠️"],
+en:{t:"How NOT to Use AI",p:"Relying too much on AI, or using it without responsibility, can hurt your learning, spread false information and put your privacy at risk.",
+i:["Copying AI-generated homework without understanding it.","Believing everything AI says without checking the facts.","Sharing passwords or private information with AI tools.","Using AI to create fake information or mislead others.","Depending on AI for every task without thinking independently."],
+g:[["Copy and Paste","A student copies an entire assignment generated by AI without understanding the content."],["Fake Information","Someone shares AI-generated information without verifying whether it is true."],["Privacy Risks","A person shares sensitive personal information with an AI tool."]]},
+es:{t:"Cómo NO usar la IA",p:"Depender demasiado de la IA, o usarla sin responsabilidad, puede perjudicar tu aprendizaje, difundir información falsa y poner en riesgo tu privacidad.",
+i:["Copiar tareas generadas por IA sin entenderlas.","Creer todo lo que dice la IA sin comprobar los hechos.","Compartir contraseñas o información privada con herramientas de IA.","Usar la IA para crear información falsa o engañar a otros.","Depender de la IA para todo sin pensar de forma independiente."],
+g:[["Copiar y pegar","Un estudiante copia una tarea completa generada por IA sin entender el contenido."],["Información falsa","Alguien comparte información generada por IA sin verificar si es verdadera."],["Riesgos de privacidad","Una persona comparte información personal sensible con una herramienta de IA."]]},
+ge:[["📝","🤖","😴"],["📰","❓","🚫"],["🔑","🪪","🔓"]]}};
+const T={en:{t:"Tips for Responsible AI Use",b:"Translate to Spanish",l:"Listen",h:"Click the image to see examples",
+c:[["🤔","Think before you trust","Ask yourself if an answer makes sense."],["🔎","Verify information with reliable sources","Compare AI answers with books and trusted sites."],["🔒","Protect your privacy","Never share passwords or personal data."],["🎨","Use your own creativity","Let AI inspire you, but create your own work."],["🤝","Be honest about using AI","Tell your teacher when and how you used it."]]},
+es:{t:"Consejos para un uso responsable de la IA",b:"Translate to English",l:"Escuchar",h:"Haz clic en la imagen para ver ejemplos",
+c:[["🤔","Piensa antes de confiar","Pregúntate si la respuesta tiene sentido."],["🔎","Verifica con fuentes confiables","Compara las respuestas de la IA con libros y sitios confiables."],["🔒","Protege tu privacidad","Nunca compartas contraseñas ni datos personales."],["🎨","Usa tu propia creatividad","Deja que la IA te inspire, pero crea tu propio trabajo."],["🤝","Sé honesto al usar IA","Cuéntale a tu profesor cuándo y cómo la usaste."]]}};
+T.en.b="Translate to Spanish";
+const lang={good:"en",bad:"en",tips:"en"};
+function ill(em,[c1,c2],big){const id="g"+Math.random().toString(36).slice(2,7);
+const pos=big?[[110,170,110],[300,190,120],[470,130,80]]:[[70,110,70],[160,120,60],[240,80,40]];
+const w=big?600:300,h=big?380:200;
+return `<svg viewBox="0 0 ${w} ${h}" role="img"><defs><linearGradient id="${id}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${c1}"/><stop offset="1" stop-color="${c2}"/></linearGradient></defs><rect width="${w}" height="${h}" fill="url(#${id})"/><circle cx="${w*.85}" cy="${h*.2}" r="${h*.3}" fill="#fff" opacity=".1"/><circle cx="${w*.1}" cy="${h*.9}" r="${h*.35}" fill="#fff" opacity=".1"/>${em.map((e,i)=>`<text x="${pos[i][0]}" y="${pos[i][1]+pos[i][2]*.35}" font-size="${pos[i][2]}" text-anchor="middle">${e}</text>`).join("")}</svg>`}
+function render(k){const d=D[k],L=lang[k],c=d[L];
+document.getElementById(k+"-row").innerHTML=`<button class="img" aria-label="${c.t}" onclick="gal('${k}')">${ill(d.main,d.pal,1)}<span class="hint">${T[L].h}</span></button>
+<div><h2>${c.t}</h2><p class="mu">${c.p}</p><ul class="l">${c.i.map((x,i)=>`<li tabindex="0" role="button" title="Click to listen" onclick="sayItem('${k}',${i},this)" onkeydown="if(event.key=='Enter')this.click()">${x}</li>`).join("")}</ul>
+<div class="btns"><button class="btn" onclick="tr('${k}')">${L=="en"?"Translate to Spanish":"Translate to English"}</button><button class="btn" id="${k}-ls" onclick="say('${k}')">🔊 ${L=="en"?"Listen":"Escuchar"}</button></div></div>`;
+document.getElementById(k+"-gal").innerHTML=c.g.map((g,i)=>`<div class="gc">${ill(d.ge[i],d.pal)}<div><h3>${g[0]}</h3><p>${g[1]}</p></div></div>`).join("")}
+function gal(k){document.getElementById(k+"-gal").classList.toggle("open")}
+function tr(k){speechSynthesis.cancel();lang[k]=lang[k]=="en"?"es":"en";render(k)}
+function renderTips(){const L=lang.tips,t=T[L];document.getElementById("tips-t").textContent=t.t;
+const b=document.getElementById("tips-tr");b.textContent=L=="en"?"Translate to Spanish":"Translate to English";
+document.getElementById("tips-g").innerHTML=t.c.map(c=>`<div class="tip"><i>${c[0]}</i><h3>${c[1]}</h3><p>${c[2]}</p></div>`).join("")}
+document.getElementById("tips-tr").onclick=()=>{lang.tips=lang.tips=="en"?"es":"en";renderTips()};
+function say(k){const s=window.speechSynthesis;if(!s){alert("Speech is not supported in this browser.");return}
+if(s.speaking){s.cancel();return}
+const c=D[k][lang[k]],L=lang[k]=="en"?"en-US":"es-ES",u=new SpeechSynthesisUtterance([c.t,c.p,...c.i].join(". "));
+u.lang=L;const v=s.getVoices().find(v=>v.lang.replace("_","-").startsWith(L.slice(0,2)));if(v)u.voice=v;u.rate=.95;
+const b=document.getElementById(k+"-ls");b.classList.add("on");u.onend=u.onerror=()=>b.classList.remove("on");s.speak(u)}
+function sayItem(k,i,el){const s=window.speechSynthesis;if(!s)return;s.cancel();
+document.querySelectorAll(".l li.on").forEach(x=>x.classList.remove("on"));
+const u=new SpeechSynthesisUtterance(D[k].en.i[i]);u.lang="en-US";
+const v=s.getVoices().find(v=>v.lang.replace("_","-").startsWith("en"));if(v)u.voice=v;u.rate=.95;
+el.classList.add("on");u.onend=u.onerror=()=>el.classList.remove("on");s.speak(u)}
+speechSynthesis&&speechSynthesis.getVoices();
+render("good");render("bad");renderTips();
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("in")),{threshold:.1});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+document.querySelectorAll(".tips").forEach(e=>e.classList.add("rv"));
+</script></body></html>
